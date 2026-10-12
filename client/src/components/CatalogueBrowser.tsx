@@ -22,7 +22,7 @@ export const CatalogueBrowser: React.FC<CatalogueBrowserProps> = ({ isOpen, onCl
   const loadHeroes = () => {
     setLoading(true);
     setError(null);
-    fetch('/api/heroes?mode=all')
+  fetch(`${import.meta.env.VITE_SERVER_URL || 'https://marvel-auction-k4q4.onrender.com'}/api/heroes?mode=all`)
       .then(r => {
         if (!r.ok) throw new Error(`Server returned ${r.status}`);
         return r.json();
