@@ -28,16 +28,18 @@ export const LandingPage: React.FC<LandingPageProps> = ({
   const [statusData, setStatusData] = useState<{ activeRooms: number; catalogueSource: string } | null>(null);
   
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
-
+const SERVER_URL =
+  import.meta.env.VITE_SERVER_URL ||
+  'https://marvel-auction-k4q4.onrender.com';
   useEffect(() => {
     // Fetch real status
-    fetch('/api/status')
+   fetch(`${SERVER_URL}/api/status`)
       .then(r => r.json())
       .then(d => setStatusData(d))
       .catch(() => { });
 
     // Fetch featured heroes
-    fetch('/api/heroes?mode=marvel&limit=6')
+   fetch(`${SERVER_URL}/api/heroes?mode=marvel&limit=6`)
       .then(r => r.json())
       .then(d => {
         if (d.heroes) setFeaturedHeroes(d.heroes.slice(0, 6));
