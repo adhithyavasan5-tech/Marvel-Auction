@@ -1,4 +1,5 @@
-﻿name: Deploy Marvel Auction
+
+name: Deploy Marvel Auction
 
 on:
   push:
@@ -29,6 +30,8 @@ jobs:
 
       - name: Install and build frontend
         working-directory: ./client
+        env:
+          VITE_SERVER_URL: ${{ vars.VITE_SERVER_URL }}
         run: |
           npm install
           npm run build
