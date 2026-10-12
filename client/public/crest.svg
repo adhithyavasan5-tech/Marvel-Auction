@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <polygon points="50,5 90,30 75,85 50,98 25,85 10,30" stroke="#C6A15B" stroke-width="3" fill="#111319" />
+  <polygon points="50,15 80,35 68,78 50,88 32,78 20,35" stroke="#8B1020" stroke-width="1.5" fill="#08090D" />
+  <!-- Crown & Star -->
+  <path d="M35 55 L40 40 L50 48 L60 40 L65 55 Z" fill="#F0D79A" stroke="#C6A15B" stroke-width="1.5" />
+  <circle cx="50" cy="32" r="3" fill="#C62838" />
+  <circle cx="38" cy="36" r="2" fill="#F0D79A" />
+  <circle cx="62" cy="36" r="2" fill="#F0D79A" />
+  <!-- Monogram D -->
+  <text x="50" y="75" font-family="'Cinzel', serif" font-size="20" font-weight="900" fill="#F0D79A" text-anchor="middle">M</text>
+</svg>
